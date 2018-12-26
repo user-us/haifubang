@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="toTop" content="true">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--轮播图css-->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <!--本页面CSS↓-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="font/demo.css">
+    <!--轮播图js-->
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UiDi7nAZGZzIxRylnr6y0pZsMEPrGlKp"></script>
+    <!--日历-->
+    <script src="laydate/laydate.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<header class="head1">
+    <div class="w1200">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <div class="head_search">
+            <input type="text" placeholder="请输入区域、公寓名">
+            <button><i class="icon iconfont icon-sousuo"></i>　搜索</button>
+        </div>
+        <div class="head_tel">
+            <img src="images/tel.png">
+            <span class="headtels">
+                <span><i>6781609</i></span>
+                <span>服务热线</span>
+            </span>
+        </div>
+    </div>
+</header>
+
+<nav class="nav1">
+    <div class="w1200">
+        <li><a href="#">首页</a></li>
+        <li class="second_tit">
+            <a href="#" class="active_a">海外长租<img src="images/jian.png" class="jiantou"></a>
+            <div>
+                <p><a href="#" class="active_a">品牌公寓</a></p>
+                <p><a href="#">民宿</a></p>
+            </div>
+        </li>
+        <li><a href="#">海外短租</a></li>
+        <li><a href="#">找室友</a></li>
+        <li><a href="#">发布房源</a></li>
+        <li><a href="#"><i class="icon iconfont icon-shouji"></i>下载APP</a></li>
+        <span class="lores"><a href="#"><i class="icon iconfont icon-yonghu"></i>　登录</a>　|　<a href="#">注册</a></span>
+    </div>
+</nav>
+<script type="text/javascript">
+    $('.second_tit').click(function(){
+        if($(this).find('div').css('display')=='none'){
+            $(this).find('div').css('display','block');
+            $(this).find('img').removeClass('jiantou');
+        }
+        else{
+            $(this).find('div').css('display','none');
+            $(this).find('img').addClass('jiantou');
+        }
+    })
+</script>
+<!--头部结束-->
+<!--中间开始-->
+<section class="search_cont">
+    <div class="w1200">
+        <h4 class="title"><i class="icon iconfont icon-dizhi"></i><a href="#">海服邦</a> > <a href="#">海外短租</a> > <a href="#"> ATIRA公寓</a></h4>
+        <div class="minsu">
+            <div class="minsu_left0">
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(images/img1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img2.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img3.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img4.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img4.png)"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(images/img1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img2.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img3.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img4.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(images/img4.png)"></div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white"><img src="images/next.png"></div>
+                    <div class="swiper-button-prev swiper-button-white"><img src="images/prev.png"></div>
+                </div>
+                <script>
+                    var galleryThumbs = new Swiper('.gallery-thumbs', {
+                        spaceBetween: 10,
+                        slidesPerView: 4,
+                        loop: true,
+                        freeMode: true,
+                        loopedSlides: 5, //looped slides should be the same
+                        watchSlidesVisibility: true,
+                        watchSlidesProgress: true,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+                    });
+                    var galleryTop = new Swiper('.gallery-top', {
+                        spaceBetween: 10,
+                        loop:true,
+                        loopedSlides: 5, //looped slides should be the same
+                        thumbs: {
+                            swiper: galleryThumbs
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+                    });
+                </script>
+            </div>
+            <div class="minsu_right0">
+                <h2 class="minsu_title"><span class="name_minsu">房源名称</span> <span><i class="icon iconfont icon-xingxing"></i> 收藏</span>　|　<span><i class="icon iconfont icon-fenxiang"></i> 分享</span></h2>
+                <div class="house_tj house_tj0">
+                    <p class="gosch">去往墨尔本大学</p>
+                    <p>
+                        <span class="fangshi"><i class="icon iconfont icon-dkw_qiche"></i>5分钟</span>
+                        <span class="fangshi"><i class="icon iconfont icon-gongjiaoche"></i>10分钟</span>
+                        <span class="fangshi"><i class="icon iconfont icon-buxing"></i>15分钟</span>
+                        <span class="fangshi"><i class="icon iconfont icon-ditie"></i>subway8:3分钟　|　subway10:8分钟</span>
+                    </p>
+                    <p class="biaoqian"><span class="cla2">最多可住3人</span><span class="cla2">最短租期5周</span></p>
+                </div>
+                <div class="minsu_price0 min_chang"><span>￡60</span>/天</div>
+                <div class="yu_minsu"><a href="#">立即预定</a></div>
+            </div>
+        </div>
+        <div class="fang_gk">
+            <h5 class="fygk_tit">房间户型</h5>
+            <div class="fang_gy">
+                <dl class="fang_list1">
+                    <dt class="posi_dt1"><img src="images/ser.png"><span><i class="icon iconfont icon-dianzan"></i>1120</span></dt>
+                    <dd class="house_tj">
+                        <h4>一室一厅</h4>
+                        <p>去往墨尔本大学</p>
+                        <p>
+                            <span class="fangshi"><i class="icon iconfont icon-dkw_qiche"></i>5分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-gongjiaoche"></i>10分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-buxing"></i>15分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-ditie"></i>subway8:3分钟　|　subway10:8分钟</span>
+                        </p>
+                        <p class="biaoqian"><span class="cla1">保真</span><span class="cla2">最多可住3人</span><span class="cla2">最短租期5周</span></p>
+                    </dd>
+                    <dd class="last_dd1 last_dd2">
+                        <p class="money_p"><span class="money_week">￡260</span>/周</p>
+                        <p class="look_xq"><a href="#">立即预定</a></p>
+                    </dd>
+                </dl>
+                <dl class="fang_list1">
+                    <dt class="posi_dt1"><img src="images/ser.png"><span><i class="icon iconfont icon-dianzan"></i>1120</span></dt>
+                    <dd class="house_tj">
+                        <h4>一室一厅</h4>
+                        <p>去往墨尔本大学</p>
+                        <p>
+                            <span class="fangshi"><i class="icon iconfont icon-dkw_qiche"></i>5分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-gongjiaoche"></i>10分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-buxing"></i>15分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-ditie"></i>subway8:3分钟　|　subway10:8分钟</span>
+                        </p>
+                        <p class="biaoqian"><span class="cla1">保真</span><span class="cla2">最多可住3人</span><span class="cla2">最短租期5周</span></p>
+                    </dd>
+                    <dd class="last_dd1 last_dd2">
+                        <p class="money_p"><span class="money_week">￡260</span>/周</p>
+                        <p class="look_xq"><a href="#">立即预定</a></p>
+                    </dd>
+                </dl>
+                <dl class="fang_list1">
+                    <dt class="posi_dt1"><img src="images/ser.png"><span><i class="icon iconfont icon-dianzan"></i>1120</span></dt>
+                    <dd class="house_tj">
+                        <h4>一室一厅</h4>
+                        <p>去往墨尔本大学</p>
+                        <p>
+                            <span class="fangshi"><i class="icon iconfont icon-dkw_qiche"></i>5分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-gongjiaoche"></i>10分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-buxing"></i>15分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-ditie"></i>subway8:3分钟　|　subway10:8分钟</span>
+                        </p>
+                        <p class="biaoqian"><span class="cla1">保真</span><span class="cla2">最多可住3人</span><span class="cla2">最短租期5周</span></p>
+                    </dd>
+                    <dd class="last_dd1 last_dd2">
+                        <p class="money_p"><span class="money_week">￡260</span>/周</p>
+                        <p class="look_xq"><a href="#">立即预定</a></p>
+                    </dd>
+                </dl>
+                <dl class="fang_list1">
+                    <dt class="posi_dt1"><img src="images/ser.png"><span><i class="icon iconfont icon-dianzan"></i>1120</span></dt>
+                    <dd class="house_tj">
+                        <h4>一室一厅</h4>
+                        <p>去往墨尔本大学</p>
+                        <p>
+                            <span class="fangshi"><i class="icon iconfont icon-dkw_qiche"></i>5分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-gongjiaoche"></i>10分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-buxing"></i>15分钟</span>
+                            <span class="fangshi"><i class="icon iconfont icon-ditie"></i>subway8:3分钟　|　subway10:8分钟</span>
+                        </p>
+                        <p class="biaoqian"><span class="cla1">保真</span><span class="cla2">最多可住3人</span><span class="cla2">最短租期5周</span></p>
+                    </dd>
+                    <dd class="last_dd1 last_dd2">
+                        <p class="money_p"><span class="money_week">￡260</span>/周</p>
+                        <p class="look_xq"><a href="#">立即预订</a></p>
+                    </dd>
+                </dl>
+            </div>
+            <h5 class="fygk_tit">房源概况</h5>
+            <div class="fy_ss">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认识朋友的话，多人套房中的独卫单间是不错的选择，和套房内的其他同学共享厨房和客厅。每个房间都提供小双人床、书桌椅、地暖、储物柜和100MB无线网。<br><br>
+                公寓还为同学们准备了丰富的休闲娱乐设施，比如说迷你影院和公共休闲室。公共休闲室里有舒适的座椅、桌球、桌上足球和自动售卖机。最贴心的是，公寓开辟了专门的公共学习区，提供免费iMac电脑供住户使用。轻松惬意的生活氛围可以拉近同学们之间的距离，定期举行的社交活动更为增进相互了解提供了场所和机会。<br><br>
+                同学们入住期间，公寓工作人员会定期举办各种主题的社交活动，帮助同学们之间的相互了解和交流，其中包括集体出游、派对和披萨之夜，所有这些都是为了让同学们拥有一个更舒适的生活空间。
+            </div>
+            <h5 class="fygk_tit">配套设施</h5>
+            <div class="fy_ss">
+                <dl>
+                    <dt><img src="images/xxj.png"></dt>
+                    <dd>洗衣机</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/yg.png"></dt>
+                    <dd>衣柜</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/bx.png"></dt>
+                    <dd>冰箱</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/nq.png"></dt>
+                    <dd>暖气</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/chuang.png"></dt>
+                    <dd>床</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/wifi.png"></dt>
+                    <dd>宽带</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/kt.png"></dt>
+                    <dd>空调</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/ds.png"></dt>
+                    <dd>电视机</dd>
+                </dl>
+            </div>
+            <h5 class="fygk_tit">地理位置</h5>
+            <div>距离迈阿密大学：开车13分钟，公交23分钟，骑行24分钟，步行73分钟 (数据来自Google，以实际情况为准)</div>
+            <div id="map1"></div>
+            <h5 class="fygk_tit">本公寓评价(19)</h5>
+            <div class="minsu_pj">
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>房主很棒，很贴心。房子很温馨也超干净</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>房主很棒，很贴心。房子很温馨也超干净</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>房主很棒，很贴心。房子很温馨也超干净</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>房主很棒，很贴心。房子很温馨也超干净</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>被这个公寓的建筑风格迷住了 谢谢帮我找到这么棒的公寓 真的很适合我 嘿嘿～距离学校步行被这个公寓的建筑风格迷住了 谢谢帮我找到这么棒的公寓 真的很适合我 嘿嘿～距离学校步行公交都行，很方便！公寓里还有健身休闲设施 超赞！期待搬进去～公交都行，很方便！公寓里还有健身休闲设施 超赞！期待搬进去～</dd>
+                    <dd>被这个公寓的建筑风格迷住了 谢谢帮我找到这么棒的公寓 真的很适合我 嘿嘿～距离学校步行被这个公寓的建筑风格迷住了 谢谢帮我找到这么棒的公寓 真的很适合我 嘿嘿～距离学校步行公交都行，很方便！公寓里还有健身休闲设施 超赞！期待搬进去～公交都行，很方便！公寓里还有健身休闲设施 超赞！期待搬进去～</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/avator.png"></dt>
+                    <dd class="min_yhname">用户名称<span>2018-08-24</span></dd>
+                    <dd>房主很棒，很贴心。房子很温馨也超干净</dd>
+                </dl>
+            </div>
+            <div style="text-align: center">
+                <ul class="pagination">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#" class="a_active">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("map1");
+    var point = new BMap.Point(116.331398,39.897445);
+    map.centerAndZoom(point,12);
+    // 创建地址解析器实例
+    var myGeo = new BMap.Geocoder();
+    // 将地址解析结果显示在地图上,并调整地图视野
+    myGeo.getPoint("北京市海淀区上地10街", function(point){
+        if (point) {
+            map.centerAndZoom(point, 16);
+            map.addOverlay(new BMap.Marker(point));
+        }else{
+            alert("您选择地址没有解析到结果!");
+        }
+    }, "北京市");
+
+    $('.search_list li').click(function(){
+        $(this).addClass('li_dianji');
+    })
+    $('.search_list li').eq(2).click(function(){
+        alert('ddd')
+        $(this).siblings().removeClass('li_dianji')
+    })
+</script>
+<!--底部开始-->
+<footer>
+    <div class="w1200">
+        <dl class="footer_list">
+            <dt><img src="images/logo1.png" class="logo_img"></dt>
+            <dd><img src="images/ewm.png" class="ewm_img"></dd>
+            <dd class="sao_ewm">扫码下载APP</dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">关于我们</a></dt>
+            <dd><a href="#">公司介绍</a></dd>
+            <dd><a href="#">产品中心</a></dd>
+            <dd><a href="#">合作伙伴</a></dd>
+            <dd><a href="#">加入我们</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">帮助中心</a></dt>
+            <dd><a href="#">预定流程</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">服务声明</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">社交媒体</a></dt>
+            <dd><a href="#">微信公众平台</a></dd>
+            <dd><a href="#">微博</a></dd>
+            <dd><a href="#">INS</a></dd>
+            <dd><a href="#">今日头条</a></dd>
+            <dd><a href="#">百度词条</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">联系方式</a></dt>
+            <dd><a href="#">电话：6781609</a></dd>
+            <dd><a href="#">邮箱：1576831485@qq.com</a></dd>
+            <dd><a href="#">地址：天津市经济开发区南港工业区综合服务区</a></dd>
+        </dl>
+    </div>
+    <div class="w1200">
+        <div class="footer_lian">
+            友情链接：
+            <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a> <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+        </div>
+    </div>
+    <div class="footer_food">海服邦科技有限公司 | ICP经营许可证津B2-20170026 | ©Copyright2018 ke.com版权所有 | 京公网安备 11010802024019号</div>
+</footer>
+<!--底部结束-->
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>文章列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="toTop" content="true">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <!--轮播图css-->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <!--轮播图js-->
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <!--本页面CSS↓-->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="font/demo.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UiDi7nAZGZzIxRylnr6y0pZsMEPrGlKp"></script>
+    <!--导航下拉↓-->
+
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<header class="head1">
+    <div class="w1200">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <div class="head_search">
+            <input type="text" placeholder="请输入区域、公寓名">
+            <button><i class="icon iconfont icon-sousuo"></i>　搜索</button>
+        </div>
+        <div class="head_tel">
+            <img src="images/tel.png">
+            <span class="headtels">
+                <span><i>6781609</i></span>
+                <span>服务热线</span>
+            </span>
+        </div>
+    </div>
+</header>
+
+<nav class="nav1">
+    <div class="w1200">
+        <li><a href="#">首页</a></li>
+        <li class="second_tit">
+            <a href="#" class="">海外长租<img src="images/jian.png" class="jiantou"></a>
+            <div>
+                <p><a href="#" class="active_a">品牌公寓</a></p>
+                <p><a href="#">民宿</a></p>
+            </div>
+        </li>
+        <li><a href="#">海外短租</a></li>
+        <li><a href="#">找室友</a></li>
+        <li><a href="#">发布房源</a></li>
+        <li><a href="#"><i class="icon iconfont icon-shouji"></i>下载APP</a></li>
+        <span class="lores"><a href="javascript:void(0);" class="login"><i class="icon iconfont icon-yonghu"></i>　登录</a>　|　<a href="#">注册</a></span>
+    </div>
+</nav>
+<script type="text/javascript">
+    $('.second_tit').click(function(){
+        if($(this).find('div').css('display')=='none'){
+            $(this).find('div').css('display','block');
+            $(this).find('img').removeClass('jiantou');
+        }
+        else{
+            $(this).find('div').css('display','none');
+            $(this).find('img').addClass('jiantou');
+        }
+    })
+</script>
+<!--头部结束-->
+<!--中间开始-->
+<section class="search_cont">
+    <div class="w1200">
+        <h4 class="title"><i class="icon iconfont icon-dizhi"></i><a href="#">海服邦</a> > <a href="#">首页</a> > <a href="#">HFB-Overseas</a></h4>
+        <div class="text_con">
+        	<div class="text_left">
+        		<div class="texbor">
+        			<div class="text_dl"><div class="text_img"><a href=""><img src="images/text1.png"/></a></div></div>
+	        		<div class="text_c">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_dl"><div class="text_img"><a href=""><img src="images/text1.png"/></a></div></div>
+	        		<div class="text_c">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_dl"><div class="text_img"><a href=""><img src="images/text1.png"/></a></div></div>
+	        		<div class="text_c">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_c1">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co te_co1"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认识朋友的话，多人套房中的独卫单间是不错的选择，和套房内的其他同学共享厨房和客厅。每个房间都提供小双人床、书桌椅、地</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_c1">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co te_co1"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认识朋友的话，多人套房中的独卫单间是不错的选择，和套房内的其他同学共享厨房和客厅。每个房间都提供小双人床、书桌椅、地</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_c1">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co te_co1"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认识朋友的话，多人套房中的独卫单间是不错的选择，和套房内的其他同学共享厨房和客厅。每个房间都提供小双人床、书桌椅、地</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="texbor">
+        			<div class="text_c1">
+	        			<div class="text_title"><a href="">学姐有话说--海外租房风险</a></div>
+	        			<div class="te_co te_co1"><a href="">根据需求和预算的不同，iQ City有多种房型可供选择。这里有供单人入住的单间套房，也有可以和朋友一起居住的2室套房，想要多认识朋友的话，多人套房中的独卫单间是不错的选择，和套房内的其他同学共享厨房和客厅。每个房间都提供小双人床、书桌椅、地</a></div>
+	        			<div class="tex_foot"><span>海服邦</span>2018.07.17</div>
+	        		</div>
+        		</div>
+        		<div class="page"><span>上一页</span><span>1</span><span class="checked">2</span><span>3</span><span>4</span><span>5</span><span>下一页</span></div>
+        	</div>
+        	<div class="text_right">
+        		<div class="tui">相关推荐</div>
+        		<dl>
+        			<dt><a href=""><img src="images/text4.png"/></a></dt>
+        			<dd><a href="">自如寓 | 纵享自由 自如之寓</a></dd>
+        		</dl>
+        		<dl>
+        			<dt><a href=""><img src="images/text5.png"/></a></dt>
+        			<dd><a href="">凌云寓 | 即刻凌云 科技之寓</a></dd>
+        		</dl>
+        		<dl>
+        			<dt><a href=""><img src="images/text6.png"/></a></dt>
+        			<dd><a href="">平安寓 | 梧桐倚栏 学院之寓</a></dd>
+        		</dl>
+        		<dl>
+        			<dt><a href=""><img src="images/text7.png"/></a></dt>
+        			<dd><a href="">梧桐寓 | 梧桐倚栏 学院之寓</a></dd>
+        		</dl>
+        		<dl>
+        			<dt><a href=""><img src="images/text8.png"/></a></dt>
+        			<dd><a href="">凌云寓 | 即刻凌云 科技之寓 </a></dd>
+        		</dl>
+        	</div>
+        </div>
+	</div>
+</section>
+<!--底部开始-->
+<footer>
+    <div class="w1200">
+        <dl class="footer_list">
+            <dt><img src="images/logo1.png" class="logo_img"></dt>
+            <dd><img src="images/ewm.png" class="ewm_img"></dd>
+            <dd class="sao_ewm">扫码下载APP</dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">关于我们</a></dt>
+            <dd><a href="#">公司介绍</a></dd>
+            <dd><a href="#">产品中心</a></dd>
+            <dd><a href="#">合作伙伴</a></dd>
+            <dd><a href="#">加入我们</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">帮助中心</a></dt>
+            <dd><a href="#">预定流程</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">服务声明</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">社交媒体</a></dt>
+            <dd><a href="#">微信公众平台</a></dd>
+            <dd><a href="#">微博</a></dd>
+            <dd><a href="#">INS</a></dd>
+            <dd><a href="#">今日头条</a></dd>
+            <dd><a href="#">百度词条</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">联系方式</a></dt>
+            <dd><a href="#">电话：6781609</a></dd>
+            <dd><a href="#">邮箱：1576831485@qq.com</a></dd>
+            <dd><a href="#">地址：天津市经济开发区南港工业区综合服务区</a></dd>
+        </dl>
+    </div>
+    <div class="w1200">
+        <div class="footer_lian">
+            友情链接：
+            <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a> <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+        </div>
+    </div>
+    <div class="footer_food">海服邦科技有限公司 | ICP经营许可证津B2-20170026 | ©Copyright2018 ke.com版权所有 | 京公网安备 11010802024019号</div>
+</footer>
+<!--底部结束-->
+<!--登录-->
+<div class="half"></div>
+<div class="dialog">
+    <div class="deng_img"><img src="images/login.png"/></div>
+	<div class="deng_right">
+		<div class="guan"><span class="a"><img src="images/quxiao.png"/></span></div>
+		<h2>用户登录</h2>
+		<div class="phone"><i class="icon iconfont icon-xiaotuziCduan_"></i><input type="text" placeholder="手机号码" /></div>
+		<div class="pwd"><i class="icon iconfont icon-suo"></i><input type="password" placeholder="密码" /></div>
+		<div class="repwd"><i class="icon iconfont icon-yanjing-tianchong"></i><input type="password" name="repwd" placeholder="验证码"/><span><img src="images/yanzhengma.png"/></span></div>
+		<div class="re_pwd"><input type="checkbox" name="" checked>记住密码 <span><a href="javascript:void();" class="find">忘记密码</a></span></div>
+		<div class="clear"></div>
+		<div><input type="button" value="登录" /></div>
+		<div class="wq">
+			<dl>
+				<dt><a href=""><img src="images/weixin.png"/></a></dt>
+				<dd><a href="">微信</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/qq.png"/></a></dt>
+				<dd><a href="">QQ</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/weibo.png"/></a></dt>
+				<dd><a href="">微博</a></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	  $(".login").click(function(){
+      var length=document.documentElement.scrollTop;
+      $(".dialog").show().css("top",length+200+"px");
+	  $(".half").show().css("height",$(document).height());	 
+      })   
+      $(".a").click(function(){$(".dialog").hide();$(".half").hide();});   
+})
+</script>
+<!--登录-->
+</body>
+</html>

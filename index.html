@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>首页</title>
+    <meta name="toTop" content="true">
+    <!--轮播图css-->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <!--轮播图js-->
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <!--本页面CSS↓-->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="font/demo.css">
+	<!--导航下拉↓-->
+</head>
+<body>
+
+<header class="head2">
+	<div class="logo"><img src="images/logo1.png" alt=""/></div>
+	<div class="head_right">
+		<div class="navs">
+			<li><a href="#" class="checked">首页</a></li>
+		    <li class="second_tit">
+	            <a href="#" class="active_a">海外长租<img src="images/xiajiantou.png" class="jiantou"></a>
+	            <div>
+	                <p><a href="#" class="active_a">品牌公寓</a></p>
+	                <p><a href="#">民宿</a></p>
+	                <p><img src="images/xiajiantou.png"/></p>
+	            </div>
+	        </li>
+	        <!--18-10-30短租-->
+	        <li class="second_tits">
+	            <a href="#" class="active_a">海外短租<img src="images/xiajiantou.png" class="jiantou"></a>
+	            <div>
+	                <p><a href="#" class="active_a">品牌公寓</a></p>
+	                <p><a href="#">民宿</a></p>
+	                <p><img src="images/xiajiantou.png"/></p>
+	            </div>
+	        </li>
+	        <!--18-10-30短租-->
+	        <li><a href="#">找室友</a></li>
+	        <li><a href="#">发布房源</a></li>
+	        <li><a href="#" class="downapp">
+	        	<i class="icon iconfont icon-shouji"></i>下载APP</a>
+	        	<div class="thiser"><img src="images/zhifubao_er.png"/></div>
+	        	<script type="text/javascript">
+	        		$('.downapp').mouseover(function (){  
+			            $(".thiser").show();  
+			        }).mouseout(function (){  
+			            $(".thiser").hide();  
+			        });  
+	        	</script>
+	        </li>
+	        <span class="lores" style="display: none;"><a href="javascript:void(0);" class="login"><i class="icon iconfont icon-yonghu"></i>　登录</a>　|　<a href="javascript:void(0);" class="register">注册</a></span>
+	        <span class="loress"><a href="javascript:void(0);" class="login">15117909386</a>　|　<a href="javascript:void(0);" class="">退出</a></span>
+		</div>
+		<script type="text/javascript">
+	    $('.second_tit').click(function(){
+	        if($(this).find('div').css('display')=='none'){
+	            $(this).find('div').css('display','block');
+	            $(this).find('img').removeClass('jiantou');
+	            $('.second_tits').find('div').css('display','none');
+	            $('.second_tits').find('img').addClass('jiantou');
+	        }
+	        else{
+	            $(this).find('div').css('display','none');
+	            $(this).find('img').addClass('jiantou');
+	        }
+	    })
+		</script>
+		<!--18-10-30短租-->
+		<script type="text/javascript">
+	    $('.second_tits').click(function(){
+	        if($(this).find('div').css('display')=='none'){
+	            $(this).find('div').css('display','block');
+	            $(this).find('img').removeClass('jiantou');
+	            $('.second_tit').find('div').css('display','none');
+	            $('.second_tit').find('img').addClass('jiantou');
+	        }
+	        else{
+	            $(this).find('div').css('display','none');
+	            $(this).find('img').addClass('jiantou');
+	        }
+	    })
+		</script>
+		<!--18-10-30短租-->
+	</div>
+</header>
+<div class="banner swiper-container">
+	<div class="swiper-wrapper"> <!--四张轮播图-->
+		<style type="text/css">
+			.swiper-slide{ margin: 0; padding: 0;}
+		</style>
+		<div class="swiper-slide"><img src="images/banner1.jpg" alt="1"/></div>
+		<div class="swiper-slide"><img src="images/banner2.jpg" alt="2"/></div>
+		<div class="swiper-slide"><img src="images/banner3.jpg" alt="3"/></div>
+		<div class="swiper-slide"><img src="images/banner4.jpg" alt="4"/></div>
+		<div class="swiper-slide"><img src="images/banner5.jpg" alt="5"/></div>
+	</div>
+	<div class="swiper-button-prev icon iconfont icon-icon-arrow-left2"></div>
+    <div class="swiper-button-next icon iconfont icon-icon-arrow-right2"></div>
+	<script>
+            var swiper = new Swiper('.swiper-container', {
+	        spaceBetween: 30,
+	        centeredSlides: true,
+	        autoplayStopOnLast : false,
+	        autoplay: {
+			    delay: 3000,
+			    stopOnLastSlide: false,
+			    disableOnInteraction: true
+			},
+	        loop: true,
+	        pagination : '.swiper-pagination',
+		    paginationType : 'fraction',
+	        navigation: {
+	            nextEl: '.swiper-button-next',
+	            prevEl: '.swiper-button-prev'
+	        }
+	    });    
+	</script>
+	<div class="search">
+		<ul>
+			<li class="checked"><a href="javascript:void(0);">学习公寓</a></li>
+			<li><a href="javascript:void(0);">海外长租</a></li>
+			<li><a href="javascript:void(0);">海外短租</a></li>
+		</ul>
+		<div class="huan">
+			<div class="qie">
+				<input type="text" name="" placeholder="请输入区域、公寓名" value="" /><div class="search_right"><a href=""><i class="icon iconfont icon-sousuo"></i>搜索</a></div>
+			</div>
+			<div class="qie disno">
+				<input type="text" name="" placeholder="请输入长租区域、公寓名" value="" /><div class="search_right"><a href=""><i class="icon iconfont icon-sousuo"></i>搜索</a></div>
+			</div>
+			<div class="qie disno">
+				<input type="text" name="" placeholder="请输入短租区域、公寓名" value="" /><div class="search_right"><a href=""><i class="icon iconfont icon-sousuo"></i>搜索</a></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(function(){
+			$(".huan .qie:gt(0)").hide();
+			$(".search li").click(function(){
+				$(this).addClass("checked").siblings().removeClass("checked");
+				//获取序列号
+				index=$(this).index();
+				$(".huan .qie").eq(index).show().siblings().hide();
+			})
+		})
+		</script>
+	</div>
+</div>
+<!--头部结束-->
+<!--内容-->
+<div class="zhanshi">
+	<div class="zhan_con">
+		<div><span class="big">80</span>万<span class="sma_con">注册用户数量</span></div>
+		<div><span class="big">1221</span>万<span class="sma_con">床位总数量</span></div>
+		<div><span class="big">140</span>万<span class="sma_con">全球开通城市数量</span></div>
+	</div>
+</div>
+<div class="pinpai">
+	<h2>品牌公寓专区<span>纵览品牌公寓，恋上这座城</span></h2>
+	<ul>
+		<li class="checked"><a href="javascript:void(0);">美国</a></li>
+		<li><a href="javascript:void(0);">澳大利亚</a></li>
+		<li><a href="javascript:void(0);">英国</a></li>
+		<li><a href="javascript:void(0);">美国</a></li>
+		<li><a href="javascript:void(0);">澳大利亚</a></li>
+		<li><a href="javascript:void(0);">英国</a></li>
+		<li><a href="javascript:void(0);">美国</a></li>
+		<li><a href="javascript:void(0);">英国</a></li>
+		<li><a href="javascript:void(0);">美国</a></li>
+		<li><a href="javascript:void(0);">加拿大</a></li>
+		<li><a href="javascript:void(0);">法国</a></li>
+	</ul>
+	<div class="huan1">
+		<div class="qie">
+			<dl>
+				<dt><a href=""><img src="images/img1.png"/></a></dt>
+				<dd><a href="">ATIRAATIRAATIRAATIRAATIRAATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img2.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img3.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img4.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img5.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img6.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img7.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img8.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<div class="clear"></div>
+			<a href=""><div class="more">查看更多</div></a>
+		</div>
+		<div class="qie">
+			<dl>
+				<dt><a href=""><img src="images/img2.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img3.png"/></a></dt>
+				<dd><a href="">ATIRAATIRAATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img4.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img5.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img6.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img7.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img8.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/img1.png"/></a></dt>
+				<dd><a href="">ATIRA</a></dd>
+			</dl>
+		</div>
+		<div class="qie">3</div>
+		<div class="qie">4</div>
+		<div class="qie">5</div>
+		<div class="qie">6</div>
+		<div class="qie">7</div>
+		<div class="qie">8</div>
+		<div class="qie">9</div>
+		<div class="qie">10</div>
+		<div class="qie">11</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".huan1 .qie:gt(0)").hide();
+			$(".pinpai ul li").click(function(){
+				$(this).addClass("checked").siblings().removeClass("checked");
+				//获取序列号
+				index=$(this).index();
+				$(".huan1 .qie").eq(index).show().siblings().hide();
+			})
+		})
+	</script>
+</div>
+<div class="guanggao"><a href=""><img src="images/guanggao1.png"/></a></div>
+<div class="dangji">
+	<h2>当季热租榜<span>好房源那么多，我们为你精选</span></h2>
+	<div class="dang_con">
+		<div class="swiper-wrapper"> <!--四张轮播图-->
+		<div class="swiper-slide">
+			
+			<div class="dang_left">
+				<dl>
+					<dt><a href=""><img src="images/top1.png"/></a></dt>
+					<a href="">
+						<dd>
+							<span class="top">TOP1</span>
+							<span class="ziru">自如寓</span>
+							<span class="er">纵享自由 自如之寓</span>
+							<div class="more">
+								<a href="">more</a>
+							</div>
+						</dd>
+						<span class="yuding">总预订5800次</span>
+					</a>
+				</dl>
+				<dl>
+					<dt><a href=""><img src="images/top2.png"/></a></dt>
+					<a href="">
+						<dd>
+							<span class="top">TOP2</span>
+							<span class="ziru">自如寓</span>
+							<span class="er">梧桐倚栏 学院之寓</span>
+							<div class="more">
+								<a href="">more</a>
+							</div>
+						</dd>
+						<span class="yuding">总预订4800次</span>
+					</a>
+				</dl>
+				<dl>
+					<dt><a href=""><img src="images/top3.png"/></a></dt>
+					<a href="">
+						<dd>
+							<span class="top">TOP3</span>
+							<span class="ziru">自如寓</span>
+							<span class="er">梧桐倚栏 学院之寓</span>
+							<div class="more">
+								<a href="">more</a>
+							</div>
+							<span class="yuding">总预订3800次</span>
+						</dd>
+					</a>
+				</dl>
+				
+			</div>
+			<!--<dd class="dang_right">
+				<div class="tops">
+					<a href="">
+						<div class="top2">
+							<h4>top2</h4>
+							<div class="con1">梧桐寓</div>
+							<div class="con2">梧桐倚栏 学院之寓</div>
+							<a href=""><div class="more">more</div></a>
+						</div>
+						<div class="top2_ri">
+							<dl>
+								<dt><a href=""><img src="images/top2.png"/></a></dt>
+								<a href=""><dd>总预订5800次</dd></a>
+							</dl>
+						</div>
+					</a>
+				</div>
+				<div class="tops top3">
+					<div class="top2_ri">
+						<dl>
+							<dt><a href=""><img src="images/top2.png"/></a></dt>
+							<a href=""><dd>总预订5800次</dd></a>
+						</dl>
+					</div>
+					<div class="top2">
+						<h4>top2</h4>
+						<div class="con1">梧桐寓</div>
+						<div class="con2">梧桐倚栏 学院之寓</div>
+						<a href=""><div class="more">more</div></a>
+					</div>
+					
+				</div>
+				
+			</dd>-->
+			
+		</div>
+		
+	</div>
+	
+   
+	</div>
+	<div class="jian">
+		<div><i class="icon iconfont icon-icon-arrow-left2 ca1"></i></div>
+    	<div><i class="icon iconfont icon-icon-arrow-right2 ca2"></i></div>
+    	 <script>
+            var swiper = new Swiper('.dang_con', {
+	        spaceBetween: 30,
+	        centeredSlides: true,
+	        autoplayStopOnLast : false,
+	        loop: true,
+	        pagination : '.swiper-pagination',
+		    paginationType : 'fraction',
+			
+	        navigation: {
+	            nextEl: '.ca1',
+	            prevEl: '.ca2'
+	        },
+	        prevButton: '.ca1',
+			nextButton: '.ca2',
+	    });    
+	</script>
+	</div>
+</div>
+<div class="hfb">
+	<h2>HFB-Overseas<span>纵览品牌公寓，恋上这座城</span></h2>
+	<div class="videos">
+		<div class="swiper-wrapper">
+			
+			<div class="swiper-slide">
+				<div>
+					<video poster="images/video.jpg" class="bofang">
+						
+					</video>
+				</div>
+				<div>
+					<video poster="images/video2.jpg" class="bofang">
+						
+					</video>
+				</div>
+				<div>
+					<video poster="images/video3.jpg" class="bofang">
+						
+					</video>
+				</div>
+				<div>
+					<video poster="images/video4.jpg" class="bofang">
+						
+					</video>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="jian1">
+		<i class="icon iconfont icon-icon-arrow-left2 ca3"></i>
+	    <i class="icon iconfont icon-icon-arrow-right2 ca4"></i>
+	</div>
+		
+		<script>
+            var swiper = new Swiper('.videos', {
+		        spaceBetween: 30,
+		        centeredSlides: true,
+		        autoplayStopOnLast : false,
+		        loop: true,
+		        pagination : '.swiper-pagination',
+			    paginationType : 'fraction',
+				
+		        navigation: {
+		            nextEl: '.ca3',
+		            prevEl: '.ca4'
+		        },
+		        prevButton: '.ca3',
+				nextButton: '.ca4',
+		    });    
+		</script>	
+		
+	<div class="news">
+		<div><img src="images/bofang.png" class="bofang"/><a href="">学姐有话说--海外租房风险<span>2018-06-09</span></a></div>
+		<div><a href=""><img src="images/xinwen.png"/>学长有话说--海外防坑宝典<span>2018-06-09</span></a></div>
+		<div><a href=""><img src="images/xinwen.png"/>学长有话说--广东清远磁浮旅游专线项<span>2018-06-09</span></a></div>
+		<div><img src="images/bofang.png" class="bofang"/><a href="">学长有话说--遭遇雨雪天会打滑吗？<span>2018-06-09</span></a></div>
+		<div><a href=""><img src="images/xinwen.png"/>学长有话说--培育具有全球竞争力的世界一流企业<span>2018-06-09</span></a></div>
+		<div><a href=""><img src="images/xinwen.png"/>学姐有话说--海外租房风险<span>2018-06-09</span></a></div>
+		<div><a href=""><span>更多>></span></a></div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="fuwu">
+	<h2>服务特色<span>以专业的服务，为客户创造价值</span></h2>
+	<div class="tese">
+		<a href="">
+			<dl>
+				<dt><div class="col1"><div class="col2"><img src="images/lou.png"/></div></div></dt>
+				<dd>留学生专享长短租预订平台<span>下载注册身份认证后方可使用， 找室友更安全</span></dd>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dt><div class="col1"><div class="col2"><img src="images/boshi.png"/></div></div></dt>
+				<dd>留学生专享长短租预订平台<span>下载注册身份认证后方可使用， 找室友更安全</span></dd>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dt><div class="col1"><div class="col2"><img src="images/teacher.png"/></div></div></dt>
+				<dd>留学生专享长短租预订平台<span>下载注册身份认证后方可使用， 找室友更安全</span></dd>
+			</dl>
+		</a>
+		<a href="">
+			<dl>
+				<dt><div class="col1"><div class="col2"><img src="images/kefus.png"/></div></div></dt>
+				<dd>留学生专享长短租预订平台<span>下载注册身份认证后方可使用， 找室友更安全</span></dd>
+			</dl>
+		</a>
+	</div>
+</div>
+<div class="help">
+	<dl>
+		<dt><img src="images/kefu.png"/></dt>
+		<dd>有什么可以帮您？<span><a href="">在线咨询</a></span></dd>
+		<li><img src="images/quxiao2.png"/></li>
+	</dl>
+	<script type="text/javascript">
+		$(function(){
+			$(".help li").click(function(){
+			  $(".help").hide();
+			});
+		})
+	</script>
+</div>
+<!--内容-->
+<!--底部开始-->
+<footer class="bots">
+    <div class="w1200">
+        <dl class="footer_list">
+            <dt><img src="images/logo1.png" class="logo_img"></dt>
+            <dd><img src="images/ewm.png" class="ewm_img"></dd>
+            <dd class="sao_ewm">扫码下载APP</dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">关于我们</a></dt>
+            <dd><a href="#">公司介绍</a></dd>
+            <dd><a href="#">产品中心</a></dd>
+            <dd><a href="#">合作伙伴</a></dd>
+            <dd><a href="#">加入我们</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">帮助中心</a></dt>
+            <dd><a href="#">预定流程</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">服务声明</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">社交媒体</a></dt>
+            <dd><a href="#">微信公众平台</a></dd>
+            <dd><a href="#">微博</a></dd>
+            <dd><a href="#">INS</a></dd>
+            <dd><a href="#">今日头条</a></dd>
+            <dd><a href="#">百度词条</a></dd>
+        </dl>
+        <dl class="footer_list1">
+            <dt><a href="#">联系方式</a></dt>
+            <dd><a href="#">电话：6781609</a></dd>
+            <dd><a href="#">邮箱：1576831485@qq.com</a></dd>
+            <dd><a href="#">地址：天津市经济开发区南港工业区综合服务区</a></dd>
+        </dl>
+    </div>
+    <div class="w1200">
+        <div class="footer_lian">
+            友情链接：
+            <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a> <a href="#">北京房产网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">腾讯家居</a>
+            <a href="#">家具装修设计</a>
+            <a href="#">个人房源网</a>
+            <a href="#">留学生租房网</a>
+            <a href="#">北京装修</a>
+            <a href="#">广州租房</a>
+            <a href="#">广州租房</a>
+        </div>
+    </div>
+    <div class="footer_food">海服邦科技有限公司 | ICP经营许可证津B2-20170026 | ©Copyright2018 ke.com版权所有 | 京公网安备 11010802024019号</div>
+</footer>
+<div class="mobile">
+	<div class="footer_s">
+		<div class="shouji1"><img src="images/shouji.png"/></div>
+		<div class="shou_foot">
+			<div class="chakan">
+				下载海服邦APP<span>及时查看海外最新房源</span>
+			</div>
+			<div class="erweima"><img src="images/ewm.png"/></div>
+			<div class="close"><img src="images/quxiao.png"/></div>
+		</div>
+		
+		<script type="text/javascript">
+		$(function(){
+			$(".close").click(function(){
+			  $(".mobile").hide();
+			  $(".bots").css("margin-bottom","0");
+			});
+		})
+	</script>
+	</div>
+</div>
+<!--底部结束-->
+<!--登录-->
+<div class="half"></div>
+<div class="dialog">
+    <div class="deng_img"><img src="images/login.png"/></div>
+	<div class="deng_right">
+		<div class="guan"><span class="a"><img src="images/quxiao.png"/></span></div>
+		<h2>用户登录</h2>
+		<div class="phone"><i class="icon iconfont icon-xiaotuziCduan_"></i><input type="text" placeholder="手机号码" /></div>
+		<div class="pwd"><i class="icon iconfont icon-suo"></i><input type="password" placeholder="密码" /></div>
+		<div class="repwd"><i class="icon iconfont icon-yanjing-tianchong"></i><input type="password" name="repwd" placeholder="验证码"/><span><img src="images/yanzhengma.png"/></span></div>
+		<div class="re_pwd"><input type="checkbox" name="" checked>记住密码 <span><a href="javascript:void();" class="find">忘记密码</a></span></div>
+		<div class="clear"></div>
+		<div><input type="button" value="登录" /></div>
+		<div class="wq">
+			<dl>
+				<dt><a href=""><img src="images/weixin.png"/></a></dt>
+				<dd><a href="">微信</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/qq.png"/></a></dt>
+				<dd><a href="">QQ</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/weibo.png"/></a></dt>
+				<dd><a href="">微博</a></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	  $(".login").click(function(){
+      var length=document.documentElement.scrollTop;
+      $(".dialog").show().css("top",length+200+"px");
+	  $(".half").show().css("height",$(document).height());	 
+      })   
+      $(".a").click(function(){$(".dialog").hide();$(".half").hide();});   
+})
+</script>
+<!--登录-->
+<!--注册-->
+<div class="halfs"></div>
+<div class="dialogs">
+    <div class="deng_img"><img src="images/register.png"/></div>
+	<div class="deng_right">
+		<div class="guan"><span class="a as"><img src="images/quxiao.png"/></span></div>
+		<h2>用户注册<span><a href="">使用已有账号登录</a></span></h2>
+		<div class="phone"><i class="icon iconfont icon-xiaotuziCduan_"></i><input type="text" placeholder="手机号码" /></div>
+		<div class="pwd"><i class="icon iconfont icon-suo"></i><input type="password" placeholder="密码" /></div>
+		<div class="repwd"><i class="icon iconfont icon-yanjing-tianchong"></i><input type="password" name="repwd" placeholder="验证码"/></div><span class="spans">获取验证码</span>
+		<div class="clear"></div>
+		<div><input type="button" value="立即注册" /></div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	  $(".register").click(function(){
+      var length=document.documentElement.scrollTop;
+      $(".dialogs").show().css("top",length+200+"px");
+	  $(".halfs").show().css("height",$(document).height());	 
+      })   
+      $(".as").click(function(){$(".dialogs").hide();$(".halfs").hide();});   
+})
+</script>
+<!--注册-->
+<!--找回密码-->
+<div class="halfes"></div>
+<div class="dialoges">
+    <div class="deng_img"><img src="images/register.png"/></div>
+	<div class="deng_right">
+		<div class="guan"><span class="a ass"><img src="images/quxiao.png"/></span></div>
+		<h2>找回密码</h2>
+		<div class="phone"><i class="icon iconfont icon-xiaotuziCduan_"></i><input type="text" placeholder="手机号码" /></div>
+		<div class="repwd"><i class="icon iconfont icon-yanjing-tianchong"></i><input type="password" name="repwd" placeholder="验证码"/><span class="spans">获取验证码</span></div>
+		<div class="pwd"><i class="icon iconfont icon-suo"></i><input type="password" placeholder="新密码" /></div>
+		<div class="pwd"><i class="icon iconfont icon-suo"></i><input type="password" placeholder="确认新密码" /></div>
+		<div class="clear"></div>
+		<div><input type="button" value="登录" /></div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	  $(".find").click(function(){
+      var length=document.documentElement.scrollTop;
+      $(".dialog").hide();
+      $(".dialoges").show().css("top",length+200+"px");
+	  $(".halfes").show().css("height",$(document).height());	 
+      })   
+      $(".ass").click(function(){$(".dialoges").hide();$(".halfes").hide();});   
+})
+</script>
+<!--找回密码-->
+<!--视频播放-->
+<div class="halfesa"></div>
+<div class="dialogess">
+	<div class="guan"><span class="a ass"><img src="images/cuo.png"/></span></div>
+		<video controls="controls">
+			<source src="images/vie.mp4" type="video/mp4"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		
+		
+		
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	  $(".bofang").click(function(){
+      var length=document.documentElement.scrollTop;
+      $(".dialogess").show();
+	  $(".halfesa").show().css("height",$(document).height());	 
+      })   
+      $(".ass").click(function(){$(".dialogess").hide();$(".halfesa").hide();});   
+})
+</script>
+<!--视频播放-->
+</body>
+</html>
